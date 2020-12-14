@@ -12,7 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*QuienesSomosFragment quienesSomosFragment = new QuienesSomosFragment();*/
+    QuienesSomosFragment quienesSomosFragment = new QuienesSomosFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.addFormMenu:
                     /*codigo para abrir lo que quieras*/
-               /* case R.id.quienesSomosFrag:
-                    loadFragment(quienesSomosFragment);*/
+                case R.id.quienesSomosMenu:
+                    loadFragment(quienesSomosFragment);
                 case R.id.exitMenu:
                     finish();
             }

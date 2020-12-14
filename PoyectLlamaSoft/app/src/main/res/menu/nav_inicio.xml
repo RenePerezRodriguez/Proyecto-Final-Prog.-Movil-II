@@ -7,10 +7,10 @@
     android:title="Agregar Formulario"/>
 <item
     android:id="@+id/quienesSomosMenu"
-    android:icon="@android:drawable/ic_input_add"
+    android:icon="@android:drawable/ic_menu_info_details"
     android:title="Quienes Somos"/>
 <item
     android:id="@+id/exitMenu"
-    android:icon="@android:drawable/ic_input_add"
+    android:icon="@android:drawable/ic_menu_close_clear_cancel"
     android:title="Salir"/>
 </menu>
