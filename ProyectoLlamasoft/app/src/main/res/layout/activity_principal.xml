@@ -8,14 +8,14 @@
     tools:context=".PrincipalActivity">
 
     <FrameLayout
-        android:id="@+id/frame_container"
+        android:id="@+id/frame_container_principal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/principal_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
