@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -24,7 +25,17 @@ public class MainActivity extends AppCompatActivity {
         img.startAnimation(acercar);
 
 
-        new Thread(new Runnable() {
+         new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent pagina2 = new Intent(getApplicationContext(), InicioActivity.class);
+                startActivity(pagina2);
+                finish();
+            }
+        },2000);
+
+
+        /*new Thread(new Runnable() {
             @Override
             public void run() {
 
@@ -32,9 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(pagina);
 
             }
-        }).start();
+        }).start();*/
 
 
     }
 
+    /*@Override
+    protected void onStart() {
+        super.onStart();
+        Intent pagina2 = new Intent(getApplicationContext(),InicioActivity.class);
+        startActivity(pagina2);
+    }*/
 }

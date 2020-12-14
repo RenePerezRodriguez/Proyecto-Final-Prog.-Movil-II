@@ -10,7 +10,7 @@ public class ControladorFormulario {
     public ControladorFormulario(Context context) {
         adatador = new SqlAdapter(context);
     }
-    public long insertaFormulario(Formulario formulario) {
+    public void insertaFormulario(Formulario formulario) {
         SQLiteDatabase basededatos = adatador.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("nombre",formulario.getNombre());
