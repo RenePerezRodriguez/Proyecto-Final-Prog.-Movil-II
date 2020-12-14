@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
         img.startAnimation(acercar);
 
 
-         new Handler().postDelayed(new Runnable() {
+         /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent pagina2 = new Intent(getApplicationContext(), InicioActivity.class);
                 startActivity(pagina2);
                 finish();
             }
-        },2000);
+        },2000);*/
 
 
         /*new Thread(new Runnable() {
