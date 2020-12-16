@@ -9,7 +9,7 @@ public class FacturaModel {
     String fecha;
     String codigoControl;
     double importe;
-
+/**/
     public FacturaModel()
     {
 
