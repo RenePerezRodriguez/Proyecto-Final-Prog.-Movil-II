@@ -9,10 +9,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.snackbar.SnackbarContentLayout;
+
+import static com.google.android.material.snackbar.Snackbar.make;
 
 public class MainActivity extends AppCompatActivity {
-
-    QuienesSomosFragment quienesSomosFragment = new QuienesSomosFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.addFormMenu:
                     /*codigo para abrir lo que quieras*/
                 case R.id.quienesSomosMenu:
-                    loadFragment(quienesSomosFragment);
+                    Snackbar.make( findViewById(R.id.coordinatorLayout), "Somos una empresa dedicada en el desarrollo de aplicaciones moviles", BaseTransientBottomBar.LENGTH_LONG).show();
                 case R.id.exitMenu:
-                    finish();
+                    //finish();
             }
         }
     };
