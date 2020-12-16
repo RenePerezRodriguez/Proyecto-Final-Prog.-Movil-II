@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.addFormMenu:
                     /*codigo para abrir lo que quieras*/
+                    Intent pagina2 = new Intent(getApplicationContext(), CrearFormulario.class);
+                    startActivity(pagina2);
                 case R.id.quienesSomosMenu:
                     Snackbar.make( findViewById(R.id.coordinatorLayout), "Somos una empresa dedicada en el desarrollo de aplicaciones moviles", BaseTransientBottomBar.LENGTH_LONG).show();
                 case R.id.exitMenu:

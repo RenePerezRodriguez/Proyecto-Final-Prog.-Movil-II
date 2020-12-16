@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PoyectLlamaSoft">
-        <activity android:name=".FormularioActivity"></activity>
+        <activity android:name=".FormularioActivity" />
         <activity android:name=".CrearFormulario" />
         <activity android:name=".SplashScreen">
             <intent-filter>

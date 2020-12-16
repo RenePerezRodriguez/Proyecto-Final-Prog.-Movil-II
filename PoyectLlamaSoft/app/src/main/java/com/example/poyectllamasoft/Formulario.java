@@ -20,7 +20,7 @@ public class Formulario {
         Ano = ano;
     }
 
-    public Formulario() {
+    public Formulario(int anInt, String string, String cursorString, String s) {
     }
 
     public int getId() {

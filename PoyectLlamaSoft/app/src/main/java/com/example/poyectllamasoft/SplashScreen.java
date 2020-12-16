@@ -24,13 +24,10 @@ public class SplashScreen extends AppCompatActivity {
         img.startAnimation(acercar);
 
 
-       /* new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent pagina2 = new Intent(getApplicationContext(), PrincipalActivity.class);
-                startActivity(pagina2);
-                finish();
-            }
-        },2000);*/
+       new Handler().postDelayed(() -> {
+           Intent pagina2 = new Intent(getApplicationContext(), MainActivity.class);
+           startActivity(pagina2);
+           finish();
+       },2500);
     }
 }

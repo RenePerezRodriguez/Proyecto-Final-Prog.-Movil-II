@@ -56,10 +56,10 @@ public class CrearFormulario extends AppCompatActivity {
                 formulario = new Formulario(nombreString, mes, ano);
                 connectionDB.Insert(formulario);
                 //long resultado = controladorFormulario.insertaFormulario(formulario);
-                    Toast.makeText(getApplicationContext(), "Error al insertar formulario", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "formulario insertado", Toast.LENGTH_LONG).show();
                     limpiarFormulario();
                 }
-            
+
         });
     }
     private void limpiarFormulario() {
