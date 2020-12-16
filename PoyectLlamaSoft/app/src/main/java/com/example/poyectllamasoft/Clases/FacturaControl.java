@@ -4,13 +4,13 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.proyectofinalpm2.Fragments.ConnectionDB;
+import com.example.poyectllamasoft.sqladapter;
 
 public class FacturaControl {
-    private ConnectionDB connectionDB;
+    private sqladapter connectionDB;
 
     public FacturaControl(Context context){
-        connectionDB=new ConnectionDB(context);
+        connectionDB=new sqladapter(context);
     }
 
     public long newFac(FacturaModel facturaModel){

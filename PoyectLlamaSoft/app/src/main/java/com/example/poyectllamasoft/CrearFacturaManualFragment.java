@@ -1,17 +1,25 @@
 package com.example.poyectllamasoft;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.DatePickerDialog;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.poyectllamasoft.Clases.DatePickerFragment;
 import com.example.poyectllamasoft.Clases.FacturaControl;
 import com.example.poyectllamasoft.Clases.FacturaModel;
 
-public class CrearFacturaManualActivity extends AppCompatActivity {
+import java.util.Calendar;
+
+public class CrearFacturaManualFragment extends Fragment {
 
     private EditText etNIT, etNroFactura, etNroAutorizacion, etCodigoControl,etFecha,etImporte;
     private Button btnCrearFactura;
@@ -21,11 +29,9 @@ public class CrearFacturaManualActivity extends AppCompatActivity {
     private int idForm;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crear_factura_manual);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_crearfac, container, false);
+        view = inflater.inflate(R.layout.fragment_crear_factura_manual, container, false);
 
         etNIT = view.findViewById(R.id.etNIT);
         etNroFactura = view.findViewById(R.id.etNroFac);
@@ -69,5 +75,42 @@ public class CrearFacturaManualActivity extends AppCompatActivity {
 
             }
         });
+
+        etFecha.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                showDatePickerDialog();
+            }
+        });
+        return view;
+    }
+    private void showDatePickerDialog() {
+        DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                final String selectedDate = twoDigits(day) + " / " + twoDigits(month + 1) + " / " + year;
+                Calendar cal = Calendar.getInstance();
+                if (day > cal.get(Calendar.DAY_OF_MONTH) || month > cal.get(Calendar.MONTH) || year > cal.get(Calendar.YEAR)) {
+                    etFecha.setError("The date can't be higher than today's");
+                    etFecha.requestFocus();
+                } else {
+                    etFecha.setText(selectedDate);
+                }
+            }
+        });
+        newFragment.show(getActivity().getSupportFragmentManager(), "datePicker");
+    }
+    private String twoDigits(int n) {
+        return (n<=9) ? ("0"+n) : String.valueOf(n);
+    }
+
+    private void Limpiar() {
+        etNIT.setText("");
+        etNroAutorizacion.setText("");
+        etFecha.setText("");
+        etCodigoControl.setText("");
+        etImporte.setText("");
+        etNroFactura.setText("");
+
     }
 }

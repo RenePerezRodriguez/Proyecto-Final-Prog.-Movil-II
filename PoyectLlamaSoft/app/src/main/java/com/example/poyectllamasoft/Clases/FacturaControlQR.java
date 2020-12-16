@@ -4,13 +4,13 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.proyectofinalpm2.Fragments.ConnectionDB;
+import com.example.poyectllamasoft.sqladapter;
 
 public class FacturaControlQR {
-    private ConnectionDB connectionDB;
+    private sqladapter connectionDB;
 
     public FacturaControlQR(Context context){
-        connectionDB=new ConnectionDB(context);
+        connectionDB=new sqladapter(context);
     }
 
     public long newFac(FacturaModelQR facturaModelqr){
