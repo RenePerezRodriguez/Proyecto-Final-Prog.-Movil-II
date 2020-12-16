@@ -1,6 +1,7 @@
-package com.example.proyectollamasoft;
+package com.example.poyectllamasoft;
 
 public class Formulario {
+
     private int Id;
     private String Nombre;
     private int Mes;
@@ -54,4 +55,3 @@ public class Formulario {
         Ano = ano;
     }
 }
-

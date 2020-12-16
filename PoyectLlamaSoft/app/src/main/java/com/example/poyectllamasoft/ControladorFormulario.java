@@ -1,18 +1,16 @@
-package com.example.proyectollamasoft;
+package com.example.poyectllamasoft;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.proyectollamasoft.ui.gallery.GalleryFragment;
-
 public class ControladorFormulario {
-    public SqlAdapter adatador;
+    public sqladapter adatador;
 
     public ControladorFormulario(Context context) {
-        adatador = new SqlAdapter(context);
+        adatador = new sqladapter(context);
     }
-    public long insertaFormulario(Formulario formulario) {
+    public void insertaFormulario(Formulario formulario) {
         SQLiteDatabase basededatos = adatador.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("nombre",formulario.getNombre());

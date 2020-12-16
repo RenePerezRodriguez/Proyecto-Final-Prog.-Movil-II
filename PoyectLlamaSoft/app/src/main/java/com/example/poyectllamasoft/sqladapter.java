@@ -1,4 +1,4 @@
-package com.example.proyectollamasoft;
+package com.example.poyectllamasoft;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,15 +6,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class SqlAdapter extends SQLiteOpenHelper {
+public class sqladapter extends SQLiteOpenHelper {
 
     private static final String NOMBRE_BD = "proyecto.db",NOMBRE_TABLA="";
 
-    public SqlAdapter(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public sqladapter(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
-    public SqlAdapter(Context context) {
+    public sqladapter(Context context) {
         super(context,NOMBRE_BD,null,1);
     }
 
